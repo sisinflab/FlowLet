@@ -1,0 +1,53 @@
+{
+    "batch_size": 4,
+    "checkpoint_dir": "checkpoints_flowlet",
+    "compile": false,
+    "condition_embedding_dim": 512,
+    "condition_vars": [
+        "Age"
+    ],
+    "data_folder": "/path/to/dataset",
+    "device": "cuda",
+    "early_stop_patience": 200,
+    "epochs": 200,
+    "generate_after_train": false,
+    "generation_conditions": [
+        "Age=45",
+        "Age=75"
+    ],
+    "generation_output_dir": "generated_samples",
+    "grad_clip_norm": 1.0,
+    "lr": 3e-06,
+    "model_input_size": [
+        112,
+        112,
+        112
+    ],
+    "num_flow_steps": 10,
+    "num_synthetic": 10,
+    "num_workers": 4,
+    "require_conditions": true,
+    "resume_from_checkpoint": "/path/to/checkpoints/fmw_last.pth",
+    "run_name": "flowlet_run",
+    "save_size": [
+        91,
+        109,
+        91
+    ],
+    "seed": 42,
+    "unet_attention_res": "16,8",
+    "unet_channel_mult": "1,2,3,4",
+    "unet_disable_cross_attn": false,
+    "unet_dropout": 0.05,
+    "unet_model_channels": 128,
+    "unet_norm_num_groups": 32,
+    "unet_num_head_channels": -1,
+    "unet_num_heads": 8,
+    "unet_num_res_blocks": 2,
+    "use_checkpointing": true,
+    "use_xformers": true,
+    "val_split": 0.2,
+    "wandb": true,
+    "wandb_entity": null,
+    "wandb_project": "FlowLet_training"
+}

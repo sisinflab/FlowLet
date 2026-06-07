@@ -1,0 +1,24 @@
+# Python build artifacts
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Experiment outputs
+checkpoints_flowlet/
+generated_samples/
+output*/
+logs/
+wandb/
+*.log
+*.pth
+
+# Editor / OS files
+.vscode/
+.idea/
+.DS_Store
