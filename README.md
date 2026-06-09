@@ -227,11 +227,14 @@ If you use FlowLet, please cite the paper:
 
 ```bibtex
 ARXIV
-@article{danese2026flowlet,
-  title={FlowLet: Conditional 3D Brain MRI Synthesis using Wavelet Flow Matching},
-  author={Danese, Danilo and Lombardi, Angela and Attimonelli, Matteo and Fasano, Giuseppe and Di Noia, Tommaso},
-  journal={arXiv preprint arXiv:2601.05212},
-  year={2026}
+@misc{danese2026flowletconditional3dbrain,
+      title={FlowLet: Conditional 3D Brain MRI Synthesis using Wavelet Flow Matching},
+      author={Danilo Danese and Angela Lombardi and Matteo Attimonelli and Giuseppe Fasano and Tommaso Di Noia},
+      year={2026},
+      eprint={2601.05212},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2601.05212},
 }
 
 OFFICIAL - DOI TO_BE_ASSIGNED
