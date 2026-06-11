@@ -3,7 +3,11 @@
 Official PyTorch implementation of *"FlowLet: Conditional 3D Brain MRI Synthesis using
 Wavelet Flow Matching"* (accepted at **Medical Image Analysis**, Elsevier).
 
-🌐 **Project page:** https://danesed.github.io/flowlet-page/ &nbsp;·&nbsp; 📄 **Paper:** [Medical Image Analysis](https://www.sciencedirect.com/journal/medical-image-analysis) · [arXiv](https://arxiv.org/pdf/2601.05212)
+🌐 **Project page:** https://danesed.github.io/flowlet-page/ &nbsp;·&nbsp; 📄 **Paper:** [Medical Image Analysis](https://www.sciencedirect.com/journal/medical-image-analysis) · [arXiv](https://arxiv.org/pdf/2601.05212) &nbsp;·&nbsp; 🤗 **Models:** [Hugging Face](https://huggingface.co/danesed/FlowLet)
+
+[![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-danesed%2FFlowLet-yellow)](https://huggingface.co/danesed/FlowLet)
+
+> **Pretrained checkpoints** are hosted on Hugging Face at [danesed/FlowLet](https://huggingface.co/danesed/FlowLet). See [Pretrained checkpoints](#pretrained-checkpoints) for the planned variants and their current status.
 
 FlowLet is a conditional generative framework that synthesizes age-conditioned 3D brain MRI
 volumes. It performs **Flow Matching** directly in an invertible **3D Haar wavelet domain**,
@@ -60,6 +64,34 @@ pip install -r requirements.txt
 `xformers` (listed in `requirements.txt`) is optional but recommended for memory-efficient
 attention. If it is unavailable on your platform, the model falls back to PyTorch attention
 automatically; pass `--no-use_xformers` to disable it explicitly.
+
+## Pretrained checkpoints
+
+Pretrained FlowLet weights are released on the Hugging Face model repository
+[danesed/FlowLet](https://huggingface.co/danesed/FlowLet).
+
+Four Rectified Flow Matching checkpoints are planned: two spatial resolutions, each in a base and a
+large U-Net configuration. They are currently in training and will be added to the same Hugging Face
+repository (each alongside its `config.json` and `condition_ranges.json`) when ready.
+
+| Model | Saved volume | Config | U-Net params | Status |
+| --- | --- | --- | --- | --- |
+| FlowLet-RFM-91-base   | 91 × 109 × 91   | base (`channel_mult 1,2,3,4` / `attn 16,8`) | 356.4 M | In training, coming soon |
+| FlowLet-RFM-91-large  | 91 × 109 × 91   | large (`channel_mult 1,2,4,8` / `attn 4,8`) | 1.00 B  | In training, coming soon |
+| FlowLet-RFM-182-base  | 182 × 218 × 182 | base (`channel_mult 1,2,3,4` / `attn 16,8`) | 356.4 M | In training, coming soon |
+| FlowLet-RFM-182-large | 182 × 218 × 182 | large (`channel_mult 1,2,4,8` / `attn 4,8`) | 1.00 B  | In training, coming soon |
+
+Once a checkpoint is available, download it (with its sidecar JSON files) and run it through the
+generation scripts described in [Generating samples](#generating-samples).
+
+```python
+from huggingface_hub import hf_hub_download
+
+variant = "rfm-91-base"  # rfm-91-base | rfm-91-large | rfm-182-base | rfm-182-large
+ckpt    = hf_hub_download("danesed/FlowLet", f"{variant}/flowlet_{variant.replace('-', '_')}.pth")
+config  = hf_hub_download("danesed/FlowLet", f"{variant}/config.json")
+ranges  = hf_hub_download("danesed/FlowLet", f"{variant}/condition_ranges.json")
+```
 
 ## Data
 
