@@ -70,9 +70,6 @@ automatically; pass `--no-use_xformers` to disable it explicitly.
 Pretrained FlowLet weights are released on the Hugging Face model repository
 [danesed/FlowLet](https://huggingface.co/danesed/FlowLet).
 
-Four Rectified Flow Matching checkpoints are planned: two spatial resolutions, each in a base and a
-large U-Net configuration. They are currently in training and will be added to the same Hugging Face
-repository (each alongside its `config.json` and `condition_ranges.json`) when ready.
 
 | Model | Saved volume | Config | U-Net params | Status |
 | --- | --- | --- | --- | --- |
@@ -81,7 +78,7 @@ repository (each alongside its `config.json` and `condition_ranges.json`) when r
 | FlowLet-RFM-182-base  | 182 × 218 × 182 | base (`channel_mult 1,2,3,4` / `attn 16,8`) | 356.4 M | In training, coming soon |
 | FlowLet-RFM-182-large | 182 × 218 × 182 | large (`channel_mult 1,2,4,8` / `attn 4,8`) | 1.00 B  | In training, coming soon |
 
-Once a checkpoint is available, download it (with its sidecar JSON files) and run it through the
+Download a checkpoint (with its sidecar JSON files) and run it through the
 generation scripts described in [Generating samples](#generating-samples).
 
 ```python
