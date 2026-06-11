@@ -19,9 +19,9 @@
     "grad_clip_norm": 1.0,
     "lr": 3e-06,
     "model_input_size": [
-        112,
-        112,
-        112
+        224,
+        224,
+        224
     ],
     "num_flow_steps": 10,
     "num_synthetic": 10,
@@ -30,9 +30,9 @@
     "resume_from_checkpoint": "/path/to/checkpoints/fmw_last.pth",
     "run_name": "flowlet_run",
     "save_size": [
-        91,
-        109,
-        91
+        182,
+        218,
+        182
     ],
     "seed": 42,
     "unet_attention_res": "16,8",
