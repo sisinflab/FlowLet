@@ -3,7 +3,7 @@
 Official PyTorch implementation of *"FlowLet: Conditional 3D Brain MRI Synthesis using
 Wavelet Flow Matching"* (accepted at **Medical Image Analysis**, Elsevier).
 
-🌐 **Project page:** https://danesed.github.io/flowlet-page/ &nbsp;·&nbsp; 📄 **Paper:** [Medical Image Analysis](https://www.sciencedirect.com/journal/medical-image-analysis) · [arXiv](https://arxiv.org/pdf/2601.05212) &nbsp;·&nbsp; 🤗 **Models:** [Hugging Face](https://huggingface.co/danesed/FlowLet)
+🌐 **Project page:** https://danesed.github.io/flowlet-page/ &nbsp;·&nbsp; 📄 **Paper:** [Medical Image Analysis](https://doi.org/10.1016/j.media.2026.104161) · [arXiv](https://arxiv.org/pdf/2601.05212) &nbsp;·&nbsp; 🤗 **Models:** [Hugging Face](https://huggingface.co/danesed/FlowLet)
 
 [![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-danesed%2FFlowLet-yellow)](https://huggingface.co/danesed/FlowLet)
 
@@ -266,14 +266,17 @@ ARXIV
       url={https://arxiv.org/abs/2601.05212},
 }
 
-OFFICIAL - DOI TO_BE_ASSIGNED
-@article{danese2026flowlet,
-  title   = {FlowLet: Conditional 3D Brain MRI Synthesis using Wavelet Flow Matching},
+OFFICIAL (Medical Image Analysis, version of record)
+@article{DANESE2026104161,
+  title   = {FlowLet: Conditional 3D brain MRI synthesis using wavelet flow matching},
   author  = {Danese, Danilo and Lombardi, Angela and Attimonelli, Matteo and Fasano, Giuseppe and Di Noia, Tommaso},
   journal = {Medical Image Analysis},
+  pages   = {104161},
   year    = {2026},
-  publisher = {Elsevier},
-  DOI    = {TO_BE_ASSIGNED}
+  issn    = {1361-8415},
+  doi     = {10.1016/j.media.2026.104161},
+  url     = {https://www.sciencedirect.com/science/article/pii/S1361841526002306},
+  publisher = {Elsevier}
 }
 ```
 
