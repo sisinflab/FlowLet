@@ -255,18 +255,6 @@ directory; those generated copies are what the generation scripts consume.
 If you use FlowLet, please cite the paper:
 
 ```bibtex
-ARXIV
-@misc{danese2026flowletconditional3dbrain,
-      title={FlowLet: Conditional 3D Brain MRI Synthesis using Wavelet Flow Matching},
-      author={Danilo Danese and Angela Lombardi and Matteo Attimonelli and Giuseppe Fasano and Tommaso Di Noia},
-      year={2026},
-      eprint={2601.05212},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2601.05212},
-}
-
-OFFICIAL (Medical Image Analysis, version of record)
 @article{DANESE2026104161,
   title   = {FlowLet: Conditional 3D brain MRI synthesis using wavelet flow matching},
   author  = {Danese, Danilo and Lombardi, Angela and Attimonelli, Matteo and Fasano, Giuseppe and Di Noia, Tommaso},
