@@ -1,0 +1,11 @@
+@article{DANESE2026104161,
+  title   = {FlowLet: Conditional 3D brain MRI synthesis using wavelet flow matching},
+  author  = {Danese, Danilo and Lombardi, Angela and Attimonelli, Matteo and Fasano, Giuseppe and Di Noia, Tommaso},
+  journal = {Medical Image Analysis},
+  pages   = {104161},
+  year    = {2026},
+  issn    = {1361-8415},
+  doi     = {10.1016/j.media.2026.104161},
+  url     = {https://www.sciencedirect.com/science/article/pii/S1361841526002306},
+  publisher = {Elsevier}
+}
